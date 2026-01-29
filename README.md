@@ -5,7 +5,7 @@ Projeto Integrador desenvolvido para facilitar a locação e venda de imóveis, 
 ## 🚀 Tecnologias Utilizadas
 
 * **Front-end:** HTML5, CSS3, JavaScript.
-* **Back-end:** Node.js (se usou) ou Integração SQL.
+* **Back-end:** Node.js.
 * **Banco de Dados:** MySQL.
 
 ## 📸 Funcionalidades
@@ -25,4 +25,4 @@ Projeto Integrador desenvolvido para facilitar a locação e venda de imóveis, 
     * Abra o `index.html` ou inicie o servidor local.
 
 ---
-Desenvolvido por [Seu Nome].
+Desenvolvido por Pedro Henrique (Yuki).
