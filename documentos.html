@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Living - Documentos</title>
+    
+    <link rel="stylesheet" href="home.css"> 
+    <link rel="stylesheet" href="documentos.css"> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Easy Living</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="imoveis.html">Imóveis</a></li>
+                <li><a href="anunciar.html">Anunciar</a></li>
+                <li><a href="documentos.html">Documentos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html" class="btn-contato">Contato</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="docs-hero">
+        <div class="container">
+            <h1>Central de Documentos</h1>
+            <p>Agilize seu processo de locação ou venda. Baixe formulários e confira o checklist de documentos necessários.</p>
+        </div>
+    </section>
+
+    <main class="docs-container">
+
+        <section class="docs-lists">
+            <div class="doc-card">
+                <h3>📋 Para o Locatário (Inquilino)</h3>
+                <ul>
+                    <li>RG e CPF (Cópia autenticada)</li>
+                    <li>Comprovante de Residência atual</li>
+                    <li>Comprovante de Renda (3 últimos holerites)</li>
+                    <li>Declaração de Imposto de Renda Completa</li>
+                </ul>
+            </div>
+
+            <div class="doc-card">
+                <h3>🏠 Para o Proprietário</h3>
+                <ul>
+                    <li>Matrícula do Imóvel atualizada</li>
+                    <li>Cópia do IPTU do ano vigente</li>
+                    <li>RG e CPF dos proprietários</li>
+                    <li>Procuração (se houver representante)</li>
+                </ul>
+            </div>
+
+            <div class="doc-card">
+                <h3>🤝 Para Fiadores</h3>
+                <ul>
+                    <li>RG e CPF (Casal, se houver)</li>
+                    <li>Certidão de Casamento/Nascimento</li>
+                    <li>Matrícula de Imóvel Quitada (Garantia)</li>
+                    <li>Comprovante de Renda Superior a 3x o aluguel</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="docs-downloads">
+            <h2>Arquivos para Download</h2>
+            <div class="download-grid">
+
+                <div class="download-item" onclick="simularDownload('Ficha_Cadastral_PF.pdf')">
+                    <div class="icon">📄</div>
+                    <div class="info">
+                        <h4>Ficha Cadastral (Pessoa Física)</h4>
+                        <span>PDF - 1.2 MB</span>
+                    </div>
+                    <button class="btn-download">Baixar</button>
+                </div>
+
+                <div class="download-item" onclick="simularDownload('Modelo_Contrato.pdf')">
+                    <div class="icon">📝</div>
+                    <div class="info">
+                        <h4>Modelo de Contrato de Locação</h4>
+                        <span>PDF - 2.5 MB</span>
+                    </div>
+                    <button class="btn-download">Baixar</button>
+                </div>
+
+                <div class="download-item" onclick="simularDownload('Guia_Vistoria.pdf')">
+                    <div class="icon">🔍</div>
+                    <div class="info">
+                        <h4>Guia de Vistoria de Imóvel</h4>
+                        <span>PDF - 800 KB</span>
+                    </div>
+                    <button class="btn-download">Baixar</button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        function simularDownload(nomeArquivo) {
+            alert(`Iniciando download de: ${nomeArquivo}...\n(Esta é uma simulação para o Projeto Integrador)`);
+        }
+    </script>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Easy Living</h4>
+                <p>CRECI: 12345-J</p>
+                <p>Endereço: Rua Fictícia, 123, Centro</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="imoveis.html">Imóveis</a></li>
+                    <li><a href="anunciar.html">Anunciar</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Email: easyliving@gmail.com</p>
+                <p>Telefone: (11) 99999-8888</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Easy Living. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

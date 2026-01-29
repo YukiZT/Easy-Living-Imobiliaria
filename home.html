@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Easy Living</title>
+        <link rel="stylesheet" href="home.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Living</title>
+    </head>
+<body>
+
+    <header>
+        <nav>
+            <a href="home.html" class="logo">Easy Living</a>
+            <ul class="nav-links"> <li><a href="anunciar.html">Anunciar</a></li>
+                <li><a href="imoveis.html">Imóveis</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="documentos.html">Documentos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="login.html" class="login-button">Login</a></li>
+            </ul>
+            <button class="mobile-menu-toggle">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section class="hero-search">
+            <h1>Encontre o imóvel perfeito para você</h1>
+            <form action="/imoveis.html" method="GET">
+                <div class="form-group">
+                    <label for="tipo-imovel">Tipo do Imóvel</label>
+                    <select name="tipo-imovel" id="tipo-imovel">
+                        <option value="">Todos os Tipos</option>
+                        <optgroup label="Residencial">
+                            <option value="apartamento">Apartamento</option>
+                            <option value="casa">Casa</option>
+                            <option value="casa-condominio">Casa em Condomínio</option>
+                            <option value="cobertura">Cobertura</option>
+                            <option value="terreno">Lote ou Terreno</option>
+                        </optgroup>
+                        <optgroup label="Comercial">
+                            <option value="sala-comercial">Sala Comercial</option>
+                            <option value="loja">Loja</option>
+                            <option value="galpao">Galpão</option>
+                        </optgroup>
+                        <optgroup label="Rural">
+                            <option value="fazenda-sitio">Fazenda ou Sítio</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="localidade">Localidade</label>
+                    <input type="text" id="localidade" name="localidade" placeholder="Digite o bairro ou cidade">
+                </div>
+                <button type="submit" class="search-button">Buscar</button>
+            </form>
+        </section>
+
+        <section class="featured-properties">
+        </section>
+
+        <section class="new-listings">
+            <h2>Recém-Adicionados</h2>
+            <p class="section-subtitle">Confira as últimas propriedades que entraram em nosso catálogo.</p>
+            <div class="property-grid">
+
+                <article class="property-card">
+                    <a href="detalhe-imovel.html">
+                        <div class="new-badge">NOVO</div>
+                        <img src="https://via.placeholder.com/400x250.png?text=Foto+do+Imóvel" alt="Loft Urbano em Área Central">
+                        <div class="property-info">
+                            <h3>Loft Urbano em Área Central</h3>
+                            <p class="property-location">Vila Madalena, São Paulo</p>
+                            <div class="property-details">
+                                <span>Área: 60 m²</span>
+                                <span>Quartos: 1</span>
+                                <span>Banheiros: 1</span>
+                            </div>
+                            <p class="property-price">R$ 3.800,00 /mês</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="property-card">
+                    <a href="detalhe-imovel.html">
+                        <div class="new-badge">NOVO</div>
+                        <img src="https://via.placeholder.com/400x250.png?text=Foto+do+Imóvel" alt="Casa Térrea com Quintal">
+                        <div class="property-info">
+                            <h3>Casa Térrea com Quintal</h3>
+                            <p class="property-location">Jardim Botânico, Curitiba</p>
+                            <div class="property-details">
+                                <span>Área: 150 m²</span>
+                                <span>Quartos: 3</span>
+                                <span>Vagas: 2</span>
+                            </div>
+                            <p class="property-price">R$ 890.000,00</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="property-card">
+                    <a href="detalhe-imovel.html">
+                        <div class="new-badge">NOVO</div>
+                        <img src="https://via.placeholder.com/400x250.png?text=Foto+do+Imóvel" alt="Terreno em Condomínio Fechado">
+                        <div class="property-info">
+                            <h3>Terreno em Condomínio Fechado</h3>
+                            <p class="property-location">Alphaville, Barueri</p>
+                            <div class="property-details">
+                                <span>Área: 450 m²</span>
+                            </div>
+                            <p class="property-price">R$ 650.000,00</p>
+                        </div>
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+            <h2>Imóveis em Destaque</h2>
+            <div class="property-grid">
+
+                <article class="property-card">
+                    <a href="detalhe-imovel.html">
+                        <img src="https://via.placeholder.com/400x250.png?text=Foto+do+Imóvel" alt="Apartamento Moderno no Centro">
+                        <div class="property-info">
+                            <h3>Apartamento Moderno no Centro</h3>
+                            <p class="property-location">Centro, Cidade Exemplo</p>
+                            <div class="property-details">
+                                <span>Área: 75 m²</span>
+                                <span>Quartos: 2</span>
+                                <span>Banheiros: 2</span>
+                            </div>
+                            <p class="property-price">R$ 450.000,00</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="property-card">
+                    <a href="detalhe-imovel.html">
+                        <img src="https://via.placeholder.com/400x250.png?text=Foto+do+Imóvel" alt="Casa com Piscina e Jardim">
+                        <div class="property-info">
+                            <h3>Casa com Piscina e Jardim</h3>
+                            <p class="property-location">Bairro Nobre, Cidade Exemplo</p>
+                            <div class="property-details">
+                                <span>Área: 220 m²</span>
+                                <span>Quartos: 4</span>
+                                <span>Vagas: 3</span>
+                            </div>
+                            <p class="property-price">R$ 1.200.000,00</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="property-card">
+                    <a href="detalhe-imovel.html">
+                        <img src="https://via.placeholder.com/400x250.png?text=Foto+do+Imóvel" alt="Sala Comercial Bem Localizada">
+                        <div class="property-info">
+                            <h3>Sala Comercial Bem Localizada</h3>
+                            <p class="property-location">Avenida Principal, Cidade Exemplo</p>
+                            <div class="property-details">
+                                <span>Área: 40 m²</span>
+                                <span>Banheiros: 1</span>
+                                <span>Andar: 10º</span>
+                            </div>
+                            <p class="property-price">R$ 2.500,00 /mês</p>
+                        </div>
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Easy Living</h4>
+                <p>CRECI: 12345-J</p>
+                <p>Endereço: Rua Fictícia, 123, Centro</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="imoveis.html">Imóveis</a></li>
+                    <li><a href="anunciar.html">Anunciar</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Email: easyliving@gmail.com</p>
+                <p>Telefone: (11) 99999-8888</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Easy Living. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="js/main.js" defer></script> </body>
+</body>
+</html>

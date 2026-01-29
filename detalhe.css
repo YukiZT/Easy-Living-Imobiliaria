@@ -1,0 +1,524 @@
+/* detalhe.css */
+
+/* ======================= 1. VARIÁVEIS DE COR ======================= */
+/* Garantindo que as variáveis estejam disponíveis caso home.css não seja carregado */
+:root {
+    --cor-primaria: #ffab3e;
+    --cor-escura: #000000;
+    --cor-clara: #ffffff;
+    --cor-texto: #333333;
+    --cor-fundo-suave: #f9f9f9;
+}
+
+/* ======================= 2. APAGADO ============================================ */
+
+/* ======================= 3. LAYOUT PRINCIPAL (2 COLUNAS) ======================= */
+.property-layout-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que a sidebar quebre para baixo em telas pequenas */
+    gap: 2rem;
+    padding: 0 5%;
+    /* Alinha com o espaçamento do restante do site */
+    max-width: 1400px;
+    margin: 0 auto 4rem auto;
+}
+
+/* Coluna da Esquerda (Conteúdo) */
+.property-main-content {
+    flex: 1;
+    /* Ocupa o espaço disponível */
+    min-width: 60%;
+    /* Garante que seja a coluna principal */
+}
+
+/* Coluna da Direita (Sidebar de Contato) */
+.property-sidebar {
+    flex-basis: 360px;
+    /* Largura base da sidebar */
+    min-width: 320px;
+}
+
+/* ======================= 4. CONTEÚDO DA ESQUERDA (DETALHES) ======================= */
+
+.property-header h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.property-location {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.property-key-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 2rem;
+}
+
+.property-key-features span {
+    font-size: 1.1rem;
+    color: var(--cor-texto);
+}
+
+.property-price-block .price-label {
+    font-size: 1rem;
+    color: #666;
+}
+
+.property-price-block .price-value {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+}
+
+.property-price-block .sub-price {
+    font-size: 1rem;
+    color: #555;
+    margin-top: -5px;
+}
+
+/* Estilo padrão para todas as seções (Descrição, Características, etc.) */
+.property-section {
+    margin-top: 3rem;
+}
+
+.property-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--cor-primaria);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.property-section p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* Lista de Características em colunas */
+.features-list {
+    list-style: none;
+    padding: 0;
+    columns: 2;
+    /* Divide a lista em 2 colunas */
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    gap: 1.5rem;
+}
+
+.features-list li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.75rem;
+    font-size: 1.05rem;
+}
+
+/* Adiciona um "check" (✔) ou similar antes de cada item */
+.features-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--cor-primaria);
+    font-weight: 700;
+}
+
+/* ======================= 5. SIMULADOR DE FINANCIAMENTO ======================= */
+.simulator-form {
+    background: var(--cor-fundo-suave);
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-row .input-group {
+    flex: 1;
+    /* Faz os inputs ocuparem o mesmo espaço */
+}
+
+.simulator-form .input-group label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.simulator-form .input-group input,
+.simulator-form .input-group select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.btn-simulate {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-simulate:hover {
+    background-color: #333;
+}
+
+.simulation-result {
+    text-align: center;
+    background-color: var(--cor-primaria);
+    color: var(--cor-escura);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+}
+
+.simulation-result h3 {
+    font-size: 2.2rem;
+}
+
+/* ======================= 6. SIDEBAR DE CONTATO (COLUNA DIREITA) ======================= */
+.contact-card {
+    background: var(--cor-clara);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    /* Efeito "flutuante" */
+    top: 100px;
+    /* Distância do topo (para não colar no menu) */
+}
+
+.contact-card h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.contact-card .input-group {
+    margin-bottom: 1rem;
+}
+
+.contact-card .input-group label {
+    display: none;
+    /* O placeholder já indica a função */
+}
+
+.contact-card .input-group input,
+.contact-card .input-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.contact-card .input-group textarea {
+    resize: vertical;
+    /* Permite ao usuário aumentar a altura */
+}
+
+.contact-card .input-group-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.btn-contact {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: var(--cor-primaria);
+    color: var(--cor-escura);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+    background-color: #e69a38;
+}
+
+.btn-whatsapp {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: #25D366;
+    /* Cor do WhatsApp */
+    color: var(--cor-clara);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ======================= 7. RESPONSIVIDADE (TELAS MENORES) ======================= */
+@media (max-width: 900px) {
+    .property-layout-container {
+        flex-direction: column;
+        /* Coloca a sidebar abaixo do conteúdo */
+        padding: 0 3%;
+    }
+
+    .property-sidebar {
+        flex-basis: auto;
+        /* Reseta a largura base */
+        width: 100%;
+        position: static;
+        /* Remove o efeito "sticky" */
+        margin-top: 2rem;
+    }
+
+    .features-list {
+        columns: 1;
+        /* Uma coluna só para a lista */
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .property-header h1 {
+        font-size: 2rem;
+    }
+
+    .property-price-block .price-value {
+        font-size: 2.2rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        /* Empilha os inputs do simulador */
+    }
+}
+
+/* ======================= CARROSSEL DE MINIATURAS ======================= */
+
+/* O container que segura tudo (botões + janela de imagens) */
+.thumbnails-carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    position: relative;
+    /* Para posicionar os botões se necessário */
+}
+
+/* A "janela" que limita a visão das miniaturas */
+.gallery-thumbnails-window {
+    flex: 1;
+    /* Ocupa todo o espaço entre os botões */
+    overflow: hidden;
+    /* O SEGREDO: Esconde o que transborda */
+    border-radius: 8px;
+    /* Arredonda os cantos da janela */
+}
+
+/* O container que segura todas as imagens numa linha longa */
+.gallery-thumbnails {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    /* Permite rolar horizontalmente */
+    scroll-behavior: smooth;
+    /* Faz a rolagem ser suave */
+
+    /* Esconde a barra de rolagem nativa (para ficar mais bonito) */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+}
+
+.gallery-thumbnails::-webkit-scrollbar {
+    /* Chrome, Safari, Edge */
+    display: none;
+}
+
+/* Estilo das imagens (miniaturas) */
+.gallery-thumbnails img {
+    width: 120px;
+    /* Um pouco maiores para facilitar o clique */
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.5;
+    /* Mais transparentes quando inativas */
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    /* IMPORTANTE: Impede que as imagens sejam esmagadas */
+    border: 2px solid transparent;
+    /* Reserva espaço para a borda */
+}
+
+/* Estilo da miniatura ativa ou hover */
+.gallery-thumbnails img.active,
+.gallery-thumbnails img:hover {
+    opacity: 1;
+    border-color: var(--cor-primaria);
+    transform: scale(1.05);
+    /* Um leve zoom para destacar */
+}
+
+/* Estilo dos Botões do Carrossel */
+.carousel-btn {
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Fundo semi-transparente */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    /* Botões redondos */
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+    /* Garante que ficam sobre as imagens */
+}
+
+.carousel-btn:hover {
+    background-color: var(--cor-primaria);
+    /* Cor de destaque no hover */
+}
+
+/* ======================= GALERIA DE FOTOS (CARROSSEL) ======================= */
+
+/* Container Principal da Galeria */
+.property-gallery {
+    margin-bottom: 3rem;
+}
+
+/* Imagem Principal (Grande) */
+.gallery-main-image {
+    width: 100%;
+    height: 500px; /* Altura fixa para consistência */
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem; /* Espaço para o carrossel embaixo */
+}
+
+.gallery-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Corta a imagem para preencher sem distorcer */
+    transition: opacity 0.3s ease; /* Suaviza a troca de imagem */
+}
+
+/* --- Carrossel de Miniaturas --- */
+
+/* O container que segura tudo (botões + janela de imagens) */
+.thumbnails-carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre botões e imagens */
+    position: relative;
+}
+
+/* A "janela" que limita a visão das miniaturas */
+.gallery-thumbnails-window {
+    flex: 1; /* Ocupa todo o espaço central */
+    overflow: hidden; /* O SEGREDO: Esconde o que transborda */
+    border-radius: 8px;
+}
+
+/* O container interno que segura as imagens numa linha */
+.gallery-thumbnails {
+    display: flex;
+    gap: 10px; /* Espaço entre as miniaturas */
+    overflow-x: auto; /* Permite rolar horizontalmente */
+    scroll-behavior: smooth; /* Faz a rolagem ser suave */
+    
+    /* Esconde a barra de rolagem nativa */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.gallery-thumbnails::-webkit-scrollbar {
+    display: none;
+}
+
+/* Estilo das miniaturas */
+.gallery-thumbnails img {
+    width: 120px;  /* Largura fixa */
+    height: 80px;  /* Altura fixa */
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    flex-shrink: 0; /* FUNDAMENTAL: Impede que a imagem seja esmagada */
+    border: 2px solid transparent;
+}
+
+/* Miniatura ativa ou hover */
+.gallery-thumbnails img.active,
+.gallery-thumbnails img:hover {
+    opacity: 1;
+    border-color: var(--cor-primaria);
+    transform: scale(1.05);
+}
+
+/* --- Botões do Carrossel --- */
+.carousel-btn {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.carousel-btn:hover {
+    background-color: var(--cor-primaria);
+    transform: scale(1.1);
+}
+
+/* RESPONSIVIDADE: Ajusta altura da imagem principal no celular */
+@media (max-width: 768px) {
+    .gallery-main-image {
+        height: 300px;
+    }
+}

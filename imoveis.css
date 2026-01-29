@@ -1,0 +1,216 @@
+/* imoveis.css */
+
+/* ======================= 1. VARIÁVEIS DE COR ======================= */
+:root {
+    --cor-primaria: #ffab3e;
+    --cor-escura: #000000;
+    --cor-clara: #ffffff;
+    --cor-texto: #333333;
+    --cor-fundo-suave: #f9f9f9;
+}
+
+/* ======================= 2. LAYOUT PRINCIPAL (FILTROS + RESULTADOS) ======================= */
+.search-layout-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os filtros passem para cima em telas pequenas */
+    gap: 2rem;
+    padding: 2rem 5%; /* Alinha com o espaçamento do restante do site */
+    max-width: 1600px;
+    margin: 0 auto 4rem auto;
+}
+
+/* ======================= 3. SIDEBAR DE FILTROS (ESQUERDA) ======================= */
+.filters-sidebar {
+    flex-basis: 320px; /* Largura fixa para a sidebar de filtros */
+    min-width: 300px;
+    background-color: var(--cor-clara);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    align-self: flex-start; /* Alinha ao topo */
+}
+
+.filters-sidebar h3 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.filter-group,
+.filter-group fieldset {
+    margin-bottom: 1.5rem;
+    border: none;
+    padding: 0;
+}
+
+.filter-group label,
+.filter-group legend {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.filter-group input[type="text"],
+.filter-group input[type="number"],
+.filter-group select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+/* Grupo de faixa de preço */
+.price-range {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.price-range input {
+    width: 42%;
+}
+
+.price-range span {
+    color: #888;
+}
+
+/* Grupos de Checkbox */
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.checkbox-group label {
+    font-weight: 400;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.checkbox-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.checkbox-list label {
+    font-weight: 400;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+/* Botão de Aplicar Filtros */
+.btn-filter-apply {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: var(--cor-primaria);
+    color: var(--cor-escura);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-filter-apply:hover {
+    background-color: #e69a38;
+}
+
+/* ======================= 4. CONTEÚDO PRINCIPAL (DIREITA) ======================= */
+.results-main-content {
+    flex: 1; /* Ocupa todo o espaço restante */
+    min-width: 0; /* Corrige bug de flexbox */
+}
+
+/* Cabeçalho dos Resultados (Contagem e Ordenação) */
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--cor-clara);
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.results-header p {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.sort-form label {
+    font-weight: 500;
+    margin-right: 0.5rem;
+}
+
+.sort-form select {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+/* O .property-grid já está estilizado no home.css, então não precisamos repetir */
+
+/* ======================= 5. PAGINAÇÃO ======================= */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+}
+
+.page-number,
+.page-arrow,
+.page-dots {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    text-decoration: none;
+    color: var(--cor-texto);
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.page-arrow,
+.page-dots {
+    color: #999;
+}
+
+.page-number:hover {
+    background-color: var(--cor-fundo-suave);
+}
+
+.page-number.active {
+    background-color: var(--cor-primaria);
+    color: var(--cor-escura);
+    font-weight: 700;
+}
+
+
+/* ======================= 6. RESPONSIVIDADE ======================= */
+@media (max-width: 900px) {
+    .search-layout-container {
+        /* Empilha os filtros e resultados */
+        flex-direction: column;
+    }
+
+    .filters-sidebar {
+        flex-basis: auto; /* Reseta a largura */
+        width: 100%;
+        /* Aqui no futuro podemos adicionar um JS para 
+          transformar isso num botão "Filtros" que abre um modal
+        */
+    }
+}

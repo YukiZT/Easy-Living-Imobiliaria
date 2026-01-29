@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="registrar.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie sua Conta - Easy Living</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="register-container">
+        <div class="register-box">
+            <a href="home.html" class="back-to-home">← Voltar para o início</a>
+
+            <h2>Crie sua Conta</h2>
+            <p class="subtitle">É rápido e fácil. Vamos começar!</p>
+
+            <form action="#" method="POST">
+
+                <div class="input-group">
+                    <label for="user-type">Eu sou...</label>
+                    <select id="user-type" name="user-type" required>
+                        <option value="" disabled selected>Selecione um tipo de perfil</option>
+                        <option value="interessado_proprietario">Interessado / Proprietário</option>
+                        <option value="corretor">Corretor(a)</option>
+                        <option value="imobiliaria">Imobiliária</option>
+                        <option value="construtora">Construtora / Incorporadora</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="full-name">Nome Completo / Razão Social</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Digite seu nome ou da sua empresa" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Seu melhor e-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="phone">Telefone / WhatsApp</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(XX) XXXXX-XXXX" required>
+                </div>
+
+                <fieldset class="input-group">
+                    <legend>Condição Fiscal</legend>
+                    <div class="radio-group">
+                        <label for="cpf_radio">
+                            <input type="radio" id="cpf_radio" name="fiscal_type" value="cpf" checked> CPF
+                        </label>
+                        <label for="cnpj_radio">
+                            <input type="radio" id="cnpj_radio" name="fiscal_type" value="cnpj"> CNPJ
+                        </label>
+                    </div>
+                    <input type="text" id="fiscal_number" name="fiscal_number" placeholder="Digite apenas os números" required>
+                </fieldset>
+
+                <div class="input-group">
+                    <label for="password">Crie uma Senha</label>
+                    <input type="password" id="password" name="password" required>
+                    <p class="password-hint">Entre 6 e 20 caracteres. Use letras, números e símbolos.</p>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password-confirm">Confirme sua Senha</label>
+                    <input type="password" id="password-confirm" name="password-confirm" required>
+                </div>
+
+                <div class="input-group-checkbox">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">
+                        Li e concordo com os <a href="#" target="_blank">Termos de Uso</a> e a <a href="#" target="_blank">Política de Privacidade</a> da Easy Living.
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-register">Criar Conta</button>
+            </form>
+
+            <p class="login-link">
+                Já tem uma conta? <a href="login.html">Faça login</a>
+            </p>
+        </div>
+    </div>
+    <script src="js/main.js" defer></script> </body>
+    <script src="js/main.js" defer></script> <script src="js/registrar.js" defer></script> </body>
+</body>
+</html>

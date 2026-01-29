@@ -1,0 +1,164 @@
+
+/* contato.css */
+
+/* ======================= 1. VARIÁVEIS DE COR ======================= */
+:root {
+    --cor-primaria: #ffab3e;
+    --cor-escura: #000000;
+    --cor-clara: #ffffff;
+    --cor-texto: #333333;
+    --cor-fundo-suave: #f9f9f9;
+}
+
+/* ======================= 2. CABEÇALHO DA PÁGINA ======================= */
+.contact-header {
+    text-align: center;
+    padding: 4rem 2rem 3rem 2rem;
+    background-color: var(--cor-fundo-suave);
+}
+
+.contact-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ======================= 3. LAYOUT PRINCIPAL (2 COLUNAS) ======================= */
+.contact-layout-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar em telas menores */
+    gap: 3rem;
+    padding: 3rem 5%;
+    max-width: 1400px;
+    margin: 0 auto 4rem auto;
+}
+
+/* ======================= 4. SEÇÃO DO FORMULÁRIO (ESQUERDA) ======================= */
+.contact-form-section {
+    flex: 2; /* Faz o formulário ser maior que a sidebar */
+    min-width: 320px;
+}
+
+.contact-form-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+/* Reutilizando os estilos dos formulários anteriores */
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="tel"],
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Poppins', sans-serif; /* Garante a fonte correta */
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(255, 171, 62, 0.2);
+}
+
+.btn-submit-contact {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: var(--cor-primaria);
+    color: var(--cor-escura);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-submit-contact:hover {
+    background-color: #e69a38;
+}
+
+/* ======================= 5. SIDEBAR DE INFORMAÇÕES (DIREITA) ======================= */
+.contact-info-sidebar {
+    flex: 1; /* Sidebar ocupa 1 parte, formulário ocupa 2 */
+    min-width: 320px;
+    background-color: var(--cor-clara);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    align-self: flex-start; /* Alinha ao topo */
+}
+
+.contact-info-sidebar h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.info-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-icon {
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+.info-text strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--cor-texto);
+}
+
+.info-text p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.map-placeholder {
+    margin-top: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ======================= 6. RESPONSIVIDADE ======================= */
+@media (max-width: 900px) {
+    .contact-layout-container {
+        /* Empilha as colunas */
+        flex-direction: column;
+        padding: 2rem 3%;
+    }
+}

@@ -1,0 +1,195 @@
+/* ======================= 1. CONFIGURAÇÕES GLOBAIS E VARIÁVEIS DE COR ======================= */
+:root {
+    --cor-primaria: #ffab3e;
+    --cor-escura: #000000;
+    --cor-clara: #ffffff;
+    --cor-texto: #333333;
+    --cor-fundo-suave: #f9f9f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo-suave);
+    color: var(--cor-texto);
+    /* Permite espaço para rolagem em formulários longos */
+    padding: 4rem 0; 
+}
+
+/* ======================= 2. CONTAINER E CAIXA DE REGISTRO ======================= */
+/* Estilo similar ao de login para consistência */
+.register-container {
+    width: 100%;
+    max-width: 600px; /* Um pouco mais largo para acomodar o formulário */
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-box {
+    background-color: var(--cor-clara);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px D30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+}
+
+.back-to-home {
+    display: block;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.back-to-home:hover {
+    color: var(--cor-primaria);
+}
+
+.register-box h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* ======================= 3. FORMULÁRIO E INPUTS ======================= */
+form {
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="tel"],
+.input-group input[type="password"],
+.input-group select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff; /* Garante fundo branco para select no iOS */
+}
+
+/* Estilo para quando o campo está focado (selecionado) */
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(255, 171, 62, 0.2);
+}
+
+.password-hint {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 0.5rem;
+}
+
+/* ======================= 4. GRUPO CPF/CNPJ (FIELDSET) ======================= */
+.input-group fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.input-group fieldset legend {
+    padding: 0 0.5rem;
+    font-weight: 500;
+    color: var(--cor-texto);
+}
+
+.radio-group {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+#fiscal_number {
+    width: 100%;
+}
+
+/* ======================= 5. CHECKBOX DE TERMOS ======================= */
+.input-group-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+}
+
+.input-group-checkbox input[type="checkbox"] {
+    margin-top: 5px; /* Alinha melhor com o texto */
+    width: 16px;
+    height: 16px;
+}
+
+.input-group-checkbox label {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.input-group-checkbox a {
+    color: var(--cor-primaria);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* ======================= 6. BOTÃO E LINK DE LOGIN ======================= */
+.btn-register {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: var(--cor-primaria);
+    color: var(--cor-escura);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-register:hover {
+    background-color: #e69a38;
+}
+
+.login-link {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.login-link a {
+    color: var(--cor-primaria);
+    font-weight: 500;
+    text-decoration: none;
+}

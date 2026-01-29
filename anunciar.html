@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="home.css"> 
+    
+    <link rel="stylesheet" href="anunciar.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuncie seu Imóvel - Easy Living</title>
+
+    <link rel="stylesheet" href="home.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="home.html" class="logo">Easy Living</a>
+            <ul class="nav-links"> <li><a href="anunciar.html">Anunciar</a></li>
+                <li><a href="imoveis.html">Imóveis</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="documentos.html">Documentos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="login.html" class="login-button">Login</a></li>
+            </ul>
+            <button class="mobile-menu-toggle">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="anunciar-page">
+
+        <section class="anunciar-hero">
+            <div class="hero-content">
+                <h1>Anuncie seu imóvel na Easy Living</h1>
+                <p>Venda ou alugue seu imóvel de forma rápida, segura e com a melhor assessoria do mercado. Nós cuidamos de tudo para você.</p>
+                <a href="#anunciar-form" class="btn-cta-anunciar">Quero Anunciar Agora</a>
+            </div>
+        </section>
+
+        <section class="anunciar-benefits">
+            <h2>Por que anunciar conosco?</h2>
+            <div class="benefits-grid">
+                
+                <article class="benefit-card">
+                    <span class="benefit-icon">📸</span>
+                    <h3>Fotos Profissionais e Tour 360º</h3>
+                    <p>Produzimos fotos e vídeos de alta qualidade que valorizam seu imóvel e atraem mais interessados.</p>
+                </article>
+
+                <article class="benefit-card">
+                    <span class="benefit-icon">🎯</span>
+                    <h3>Marketing Digital Especializado</h3>
+                    <p>Seu anúncio será impulsionado nos principais portais e redes sociais, atingindo o público certo.</p>
+                </article>
+
+                <article class="benefit-card">
+                    <span class="benefit-icon">⚖️</span>
+                    <h3>Assessoria Jurídica Completa</h3>
+                    <p>Cuidamos de toda a burocracia e documentação, garantindo uma negociação tranquila e 100% segura.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="anunciar-form-section" id="anunciar-form">
+            <h2>Deixe os dados do seu imóvel</h2>
+            <p>Preencha o formulário abaixo e um de nossos consultores entrará em contato em breve.</p>
+            
+            <form action="#" method="POST" class="anuncio-form">
+                
+                <h3>Seus Dados Pessoais</h3>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="owner-name">Seu Nome Completo</label>
+                        <input type="text" id="owner-name" name="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="owner-email">Seu E-mail</label>
+                        <input type="email" id="owner-email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="owner-phone">Seu WhatsApp</label>
+                        <input type="tel" id="owner-phone" name="phone" required>
+                    </div>
+                </div>
+
+                <h3>Dados do Imóvel</h3>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="prop-tipo">Tipo do Imóvel</label>
+                        <select id="prop-tipo" name="tipo">
+                            <option value="apartamento">Apartamento</option>
+                            <option value="casa">Casa</option>
+                            <option value="casa-condominio">Casa em Condomínio</option>
+                            <option value="terreno">Lote ou Terreno</option>
+                            <option value="sala-comercial">Sala Comercial</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="prop-status">Qual o objetivo?</label>
+                        <select id="prop-status" name="status">
+                            <option value="venda">Vender</option>
+                            <option value="aluguel">Alugar</option>
+                            <option value="ambos">Vender ou Alugar</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="prop-address">Endereço do Imóvel (Rua, Número, Bairro)</label>
+                    <input type="text" id="prop-address" name="address" placeholder="Ex: Av. Paulista, 1000, Bela Vista">
+                </div>
+                <div class="input-group">
+                    <label for="prop-message">Observações</label>
+                    <textarea id="prop-message" name="message" rows="5" placeholder="Tem alguma informação adicional? (Ex: N° de quartos, m², etc.)"></textarea>
+                </div>
+
+                <div class="input-group-checkbox">
+                    <input type="checkbox" id="terms-anuncio" name="terms" required>
+                    <label for="terms-anuncio">Autorizo o contato de um consultor da Easy Living.</label>
+                </div>
+
+                <button type="submit" class="btn-submit-anuncio">Solicitar Anúncio</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Easy Living</h4>
+                <p>CRECI: 12345-J</p>
+                <p>Endereço: Rua Fictícia, 123, Centro</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="imoveis.html">Imóveis</a></li>
+                    <li><a href="anunciar.html">Anunciar</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Email: easyliving@gmail.com</p>
+                <p>Telefone: (11) 99999-8888</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Easy Living. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="js/main.js" defer></script> </body>
+</body>
+</html>

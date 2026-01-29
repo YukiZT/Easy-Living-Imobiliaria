@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="home.css">
+
+    <link rel="stylesheet" href="detalhe.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartamento Moderno no Centro - Easy Living</title>
+
+
+    <link rel="stylesheet" href="home.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="home.html" class="logo">Easy Living</a>
+            <ul class="nav-links">
+                <li><a href="anunciar.html">Anunciar</a></li>
+                <li><a href="imoveis.html">Imóveis</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="documentos.html">Documentos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="login.html" class="login-button">Login</a></li>
+            </ul>
+            <button class="mobile-menu-toggle">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="property-gallery">
+        <div class="gallery-main-image">
+            <img src="https://via.placeholder.com/1200x600.png?text=Carregando..." id="main-property-image"
+                alt="Foto principal do imóvel">
+        </div>
+
+        <div class="thumbnails-carousel-wrapper">
+            <button class="carousel-btn prev-btn" id="thumb-prev" aria-label="Foto anterior">&#10094;</button>
+
+            <div class="gallery-thumbnails-window">
+                <div class="gallery-thumbnails" id="gallery-thumbnails-container">
+                </div>
+            </div>
+
+            <button class="carousel-btn next-btn" id="thumb-next" aria-label="Próxima foto">&#10095;</button>
+        </div>
+    </section>
+
+    <div class="property-layout-container">
+
+        <div class="property-main-content">
+
+            <section class="property-header">
+                <h1>Apartamento Moderno no Centro</h1>
+                <p class="property-location">Rua Fictícia, 123 - Centro, Cidade Exemplo, SP</p>
+
+                <div class="property-key-features">
+                    <span>
+                        <strong>Área:</strong> 75 m²
+                    </span>
+                    <span>
+                        <strong>Quartos:</strong> 2
+                    </span>
+                    <span>
+                        <strong>Banheiros:</strong> 2
+                    </span>
+                    <span>
+                        <strong>Vagas:</strong> 1
+                    </span>
+                </div>
+
+                <div class="property-price-block">
+                    <p class="price-label">Valor de Venda</p>
+                    <p class="price-value">R$ 450.000,00</p>
+                    <p class="sub-price">Condomínio: R$ 500,00 | IPTU: R$ 120,00/mês</p>
+                </div>
+            </section>
+
+            <section class="property-section" id="description">
+                <h2>Sobre o imóvel</h2>
+                <p>Este apartamento moderno no coração da cidade oferece o equilíbrio perfeito entre conforto e
+                    conveniência. Com acabamentos de alta qualidade, uma planta inteligente e muita luz natural, é o
+                    lugar ideal para quem busca um estilo de vida urbano sem abrir mão da tranquilidade.</p>
+                <p>A sala de estar é espaçosa e se conecta a uma varanda gourmet com vista livre. A cozinha é em
+                    conceito aberto, totalmente planejada com armários de primeira linha. Os dois quartos são suítes,
+                    garantindo privacidade total.</p>
+            </section>
+
+            <section class="property-section" id="characteristics">
+                <h2>Características</h2>
+                <ul class="features-list">
+                    <li>Academia</li>
+                    <li>Piscina</li>
+                    <li>Salão de Festas</li>
+                    <li>Churrasqueira</li>
+                    <li>Playground</li>
+                    <li>Portaria 24h</li>
+                    <li>2 Suítes</li>
+                    <li>Varanda Gourmet</li>
+                    <li>Sol da manhã</li>
+                    <li>Andar alto</li>
+                    <li>Móveis planejados</li>
+                    <li>Piso em porcelanato</li>
+                </ul>
+            </section>
+
+            <section class="property-section" id="location">
+                <h2>Localização</h2>
+                <p>Rua Fictícia, 123 - Centro, Cidade Exemplo, SP</p>
+                <div class="map-placeholder">
+                    <img src="https://via.placeholder.com/800x400.png?text=Simulação+do+Mapa" alt="Mapa da localização"
+                        style="width:100%;">
+                </div>
+            </section>
+
+            <section class="property-section" id="financing-simulator">
+                <h2>Simule seu Financiamento</h2>
+                <p>Veja uma estimativa de como ficariam as parcelas para este imóvel.</p>
+                <form class="simulator-form">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="sim-valor-imovel">Valor do Imóvel</label>
+                            <input type="text" id="sim-valor-imovel" value="R$ 450.000,00">
+                        </div>
+                        <div class="input-group">
+                            <label for="sim-valor-entrada">Valor da Entrada (mín. 20%)</label>
+                            <input type="text" id="sim-valor-entrada" placeholder="R$ 90.000,00">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="sim-prazo">Prazo (em meses)</label>
+                            <select id="sim-prazo">
+                                <option value="120">120 meses (10 anos)</option>
+                                <option value="240">240 meses (20 anos)</option>
+                                <option value="360" selected>360 meses (30 anos)</option>
+                                <option value="420">420 meses (35 anos)</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="sim-juros">Taxa de Juros (ao ano)</label>
+                            <input type="text" id="sim-juros" value="9.99%">
+                        </div>
+                    </div>
+                    <button type="button" class="btn-simulate">Simular</button>
+                </form>
+                <div class="simulation-result">
+                    <p>Valor aproximado da primeira parcela:</p>
+                    <h3 id="result-value">R$ 3.100,00</h3>
+                    <small>*Esta é apenas uma simulação. Os valores podem variar.</small>
+                </div>
+            </section>
+        </div>
+
+        <aside class="property-sidebar">
+            <div class="contact-card">
+                <h3>Fale com o anunciante</h3>
+                <p>Envie uma mensagem para saber mais.</p>
+                <form action="#" method="POST">
+                    <div class="input-group">
+                        <label for="contact-name">Seu nome</label>
+                        <input type="text" id="contact-name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="contact-email">Seu e-mail</label>
+                        <input type="email" id="contact-email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="contact-phone">Seu telefone</label>
+                        <input type="tel" id="contact-phone" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="contact-message">Mensagem</label>
+                        <textarea id="contact-message"
+                            rows="5">Olá, tenho interesse neste imóvel (Ref: AP0123) e gostaria de agendar uma visita.</textarea>
+                    </div>
+                    <div class="input-group-checkbox">
+                        <input type="checkbox" id="contact-whatsapp">
+                        <label for="contact-whatsapp">Receber contato por WhatsApp</label>
+                    </div>
+                    <button type="submit" class="btn-contact">Enviar Mensagem</button>
+                    <button type="button" class="btn-whatsapp">
+                        <svg viewBox="0 0 24 24" fill="currentColor" height="20px" width="20px">...</svg> Falar por
+                        WhatsApp
+                    </button>
+                </form>
+            </div>
+        </aside>
+
+    </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Easy Living</h4>
+                <p>CRECI: 12345-J</p>
+                <p>Endereço: Rua Fictícia, 123, Centro</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="imoveis.html">Imóveis</a></li>
+                    <li><a href="anunciar.html">Anunciar</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Email: easyliving@gmail.com</p>
+                <p>Telefone: (11) 99999-8888</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Easy Living. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="js/detalhe.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+</body>
+
+</html>

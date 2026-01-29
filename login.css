@@ -1,0 +1,196 @@
+/* login.css */
+
+/* ======================= 1. CONFIGURAÇÕES GLOBAIS E VARIÁVEIS DE COR ======================= */
+:root {
+    --cor-primaria: #ffab3e;
+    --cor-escura: #000000;
+    --cor-clara: #ffffff;
+    --cor-texto: #333333;
+    --cor-fundo-suave: #f9f9f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo-suave);
+    color: var(--cor-texto);
+    /* Centraliza todo o conteúdo da página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ======================= 2. CONTAINER E CAIXA DE LOGIN ======================= */
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-box {
+    background-color: var(--cor-clara);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+}
+
+.back-to-home {
+    display: block;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.back-to-home:hover {
+    color: var(--cor-primaria);
+}
+
+.login-box h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* ======================= 3. FORMULÁRIO E INPUTS ======================= */
+form {
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(255, 171, 62, 0.2);
+}
+
+.options {
+    text-align: right;
+    margin-bottom: 1.5rem;
+}
+
+.forgot-password {
+    color: var(--cor-primaria);
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+/* ======================= 4. BOTÕES E SEPARADOR ======================= */
+.btn-login {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: var(--cor-primaria);
+    color: var(--cor-escura);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #e69a38;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #aaa;
+    margin: 1.5rem 0;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #eee;
+}
+
+.separator span {
+    padding: 0 1rem;
+}
+
+.btn-google {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--cor-clara);
+    color: var(--cor-texto);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem; /* Espaço entre o ícone e o texto */
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-google:hover {
+    background-color: #f5f5f5;
+    border-color: #ccc;
+}
+
+/* ======================= 5. LINKS INFERIORES ======================= */
+.signup-link {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.signup-link a {
+    color: var(--cor-primaria);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.terms {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #999;
+    max-width: 380px;
+    text-align: center;
+}
+
+.terms a {
+    color: #777;
+    text-decoration: underline;
+}

@@ -1,0 +1,208 @@
+/* anunciar.css */
+
+/* ======================= 1. VARIÁVEIS DE COR ======================= */
+:root {
+    --cor-primaria: #ffab3e;
+    --cor-escura: #000000;
+    --cor-clara: #ffffff;
+    --cor-texto: #333333;
+    --cor-fundo-suave: #f9f9f9;
+}
+
+/* ======================= 2. SEÇÃO HERO (CHAMADA) ======================= */
+.anunciar-hero {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    padding: 6rem 5%;
+    text-align: center;
+    /* No futuro, podemos adicionar uma imagem de fundo aqui */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    color: #f0f0f0;
+}
+
+.btn-cta-anunciar {
+    background-color: var(--cor-primaria);
+    color: var(--cor-escura);
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-cta-anunciar:hover {
+    background-color: #e69a38;
+    transform: scale(1.05);
+}
+
+/* ======================= 3. SEÇÃO DE BENEFÍCIOS ======================= */
+.anunciar-benefits {
+    padding: 4rem 5%;
+    background-color: var(--cor-fundo-suave);
+    text-align: center;
+}
+
+.anunciar-benefits h2 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefit-card {
+    background-color: var(--cor-clara);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.benefit-icon {
+    font-size: 3rem; /* Tamanho do emoji/ícone */
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+}
+
+.benefit-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ======================= 4. SEÇÃO DO FORMULÁRIO DE CAPTAÇÃO ======================= */
+.anunciar-form-section {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.anunciar-form-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.anunciar-form-section p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.anuncio-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--cor-clara);
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.anuncio-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Reutilizando estilos de formulário */
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="tel"],
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(255, 171, 62, 0.2);
+}
+
+.input-group-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+}
+
+.btn-submit-anuncio {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: var(--cor-primaria);
+    color: var(--cor-escura);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-submit-anuncio:hover {
+    background-color: #e69a38;
+}
+
+/* ======================= 5. RESPONSIVIDADE ======================= */
+@media (max-width: 600px) {
+    .anunciar-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .anuncio-form {
+        padding: 2rem;
+    }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="home.css"> 
+    
+    <link rel="stylesheet" href="contato.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Easy Living</title>
+
+    <link rel="stylesheet" href="home.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="home.html" class="logo">Easy Living</a>
+            <ul class="nav-links"> <li><a href="anunciar.html">Anunciar</a></li>
+                <li><a href="imoveis.html">Imóveis</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="documentos.html">Documentos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="login.html" class="login-button">Login</a></li>
+            </ul>
+            <button class="mobile-menu-toggle">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        
+        <section class="contact-header">
+            <h1>Entre em Contato</h1>
+            <p>Estamos aqui para ajudar. Preencha o formulário ou use um de nossos canais de atendimento.</p>
+        </section>
+
+        <div class="contact-layout-container">
+
+            <section class="contact-form-section">
+                <h2>Envie uma Mensagem</h2>
+                <form action="#" method="POST">
+                    <div class="input-group">
+                        <label for="contact-name">Nome Completo</label>
+                        <input type="text" id="contact-name" name="name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="contact-email">E-mail</label>
+                        <input type="email" id="contact-email" name="email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="contact-phone">Telefone / WhatsApp</label>
+                        <input type="tel" id="contact-phone" name="phone">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="contact-subject">Assunto</label>
+                        <select id="contact-subject" name="subject" required>
+                            <option value="" disabled selected>Selecione o motivo do contato...</option>
+                            <option value="duvida_comprar">Dúvidas sobre Compra</option>
+                            <option value="duvida_alugar">Dúvidas sobre Aluguel</option>
+                            <option value="anunciar_imovel">Quero Anunciar meu Imóvel</option>
+                            <option value="suporte_financeiro">Suporte Financeiro</option>
+                            <option value="outro">Outro Assunto</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="contact-message">Sua Mensagem</label>
+                        <textarea id="contact-message" name="message" rows="7" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit-contact">Enviar Mensagem</button>
+                </form>
+            </section>
+
+            <aside class="contact-info-sidebar">
+                <h2>Informações de Contato</h2>
+                
+                <div class="info-block">
+                    <span class="info-icon">📍</span> 
+                    <div class="info-text">
+                        <strong>Endereço</strong>
+                        <p>Rua Fictícia, 123, Sala 45<br>Centro, Cidade Exemplo - SP</p>
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <span class="info-icon">📞</span>
+                    <div class="info-text">
+                        <strong>Telefone e WhatsApp</strong>
+                        <p>(11) 99999-8888</p>
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <span class="info-icon">✉️</span>
+                    <div class="info-text">
+                        <strong>E-mail</strong>
+                        <p>easyliving@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="map-placeholder">
+                    <img src="https://via.placeholder.com/400x250.png?text=Mapa+do+Escritório" alt="Mapa da localização do escritório" style="width:100%; border-radius: 8px;">
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Easy Living</h4>
+                <p>CRECI: 12345-J</p>
+                <p>Endereço: Rua Fictícia, 123, Centro</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="imoveis.html">Imóveis</a></li>
+                    <li><a href="anunciar.html">Anunciar</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Email: easyliving@gmail.com</p>
+                <p>Telefone: (11) 99999-8888</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Easy Living. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="js/main.js" defer></script> </body>
+</body>
+</html>

@@ -1,0 +1,201 @@
+/* sobre.css */
+
+/* ======================= 1. VARIÁVEIS DE COR ======================= */
+:root {
+    --cor-primaria: #ffab3e;
+    --cor-escura: #000000;
+    --cor-clara: #ffffff;
+    --cor-texto: #333333;
+    --cor-fundo-suave: #f9f9f9;
+}
+
+/* ======================= 2. SEÇÃO HERO (TÍTULO) ======================= */
+.about-hero {
+    background-color: var(--cor-fundo-suave);
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ======================= 3. SEÇÃO NOSSA HISTÓRIA (TEXTO + IMAGEM) ======================= */
+.about-story {
+    padding: 4rem 5%;
+}
+
+.about-layout-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Para telas menores */
+}
+
+.about-text-content {
+    flex: 1; /* Ocupa 50% do espaço */
+    min-width: 300px;
+}
+
+.about-text-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--cor-primaria);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.about-text-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.about-image-content {
+    flex: 1; /* Ocupa 50% do espaço */
+    min-width: 300px;
+}
+
+.about-image-content img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ======================= 4. SEÇÃO PILARES (MISSÃO, VISÃO, VALORES) ======================= */
+.about-pillars {
+    padding: 4rem 5%;
+    background-color: var(--cor-fundo-suave);
+    text-align: center;
+}
+
+.about-pillars h2 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pillar-card {
+    background-color: var(--cor-clara);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.pillar-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.pillar-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+}
+
+.pillar-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ======================= 5. SEÇÃO EQUIPE ======================= */
+.about-team {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.about-team h2 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Imagem redonda */
+    object-fit: cover;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team-member h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.team-member p {
+    color: #777;
+    font-weight: 500;
+}
+
+/* ======================= 6. SEÇÃO CTA (CALL TO ACTION) ======================= */
+.about-cta {
+    padding: 4rem 5%;
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    text-align: center;
+}
+
+.about-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #f0f0f0;
+}
+
+.btn-cta-sobre {
+    background-color: var(--cor-primaria);
+    color: var(--cor-escura);
+    padding: 0.9rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-cta-sobre:hover {
+    background-color: #e69a38;
+    transform: scale(1.05);
+}
+
+/* ======================= 7. RESPONSIVIDADE ======================= */
+@media (max-width: 900px) {
+    .about-layout-container {
+        /* Empilha o texto e a imagem */
+        flex-direction: column-reverse; /* Imagem vem primeiro, visualmente */
+    }
+}

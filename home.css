@@ -1,0 +1,371 @@
+/* style.css */
+
+/* ======================= 1. CONFIGURAÇÕES GLOBAIS E VARIÁVEIS DE COR ======================= */
+
+/* Definimos suas cores como variáveis para usar facilmente em todo o site */
+:root {
+    --cor-primaria: #ffab3e; /* Amarelo/laranja principal */
+    --cor-escura: #000000;   /* Preto */
+    --cor-clara: #ffffff;   /* Branco */
+    --cor-texto: #333333;   /* Cinza escuro para textos */
+    --cor-fundo-suave: #f9f9f9; /* Cinza bem claro para fundos de seção */
+}
+
+/* Reset básico e definição da fonte para todo o site */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Fonte moderna e amigável */
+    background-color: var(--cor-clara);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ======================= 2. CABEÇALHO E NAVEGAÇÃO ======================= */
+header {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    padding: 1rem 5%; /* Espaçamento interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Fixa o menu no topo ao rolar a página */
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex; /* Alinha os itens lado a lado */
+    justify-content: space-between; /* Joga o logo para um canto e o menu para o outro */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cor-primaria); /* Logo com a cor de destaque */
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem; /* Espaço entre os itens do menu */
+}
+
+nav ul a {
+    color: var(--cor-clara);
+    font-weight: 500;
+    transition: color 0.3s ease; /* Efeito suave na troca de cor */
+}
+
+nav ul a:hover {
+    color: var(--cor-primaria); /* Muda para a cor de destaque ao passar o mouse */
+}
+
+.login-button {
+    background-color: var(--cor-primaria);
+    color: var(--cor-escura);
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px; /* Bordas arredondadas */
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #e69a38; /* Um tom um pouco mais escuro para o efeito hover */
+}
+
+
+/* ======================= 3. SEÇÃO DE BUSCA (HERO) ======================= */
+.hero-search {
+    background-color: var(--cor-fundo-suave);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero-search h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-search form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap; /* Permite que o formulário se ajuste em telas menores */
+    background: var(--cor-clara);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin: 0 auto; /* Centraliza o formulário */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    min-width: 200px;
+}
+
+.search-button {
+    background-color: var(--cor-primaria);
+    color: var(--cor-escura);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-end; /* Alinha com a base dos inputs */
+}
+
+.search-button:hover {
+    background-color: #e69a38;
+}
+
+/* ======================= 4. SEÇÃO DE IMÓVEIS EM DESTAQUE ======================= */
+.featured-properties {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.featured-properties h2 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+}
+
+.property-grid {
+    display: grid;
+    /* Cria um grid responsivo: colunas com no mínimo 320px, se ajustando ao espaço */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem; /* Espaço entre os cards */
+}
+
+/* Estilo do Card do Imóvel - aqui entra o visual "jovem e profissional" */
+.property-card {
+    background: var(--cor-clara);
+    border-radius: 16px; /* Bordas bem arredondadas, como você pediu */
+    overflow: hidden; /* Garante que a imagem não saia das bordas arredondadas */
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Sombra suave para dar profundidade */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+}
+
+.property-card:hover {
+    transform: translateY(-8px); /* Efeito de "flutuar" ao passar o mouse */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.property-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+}
+
+.property-info {
+    padding: 1.5rem;
+}
+
+.property-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.property-location {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.property-details {
+    display: flex;
+    gap: 1.5rem;
+    color: #555;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.property-price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+}
+
+/* ======================= 5. RODAPÉ ======================= */
+footer {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    padding: 3rem 5% 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #444;
+    font-size: 0.9rem;
+}
+
+/* ======================= 6. ESTILOS ADICIONAIS PARA NOVOS IMÓVEIS ======================= */
+
+/* Estilo para a nova seção (reaproveitando o estilo da seção de destaques) */
+.new-listings {
+    padding: 4rem 5%;
+    text-align: center;
+    background-color: var(--cor-fundo-suave); /* Fundo diferente para variar */
+}
+
+.new-listings h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    max-width: 600px;
+    margin: 0 auto 3rem auto; /* Centraliza o subtítulo */
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Para o posicionamento do selo funcionar, o "pai" (o card) precisa ter position: relative */
+.property-card {
+    position: relative; 
+}
+
+/* Estilo do selo "NOVO" */
+.new-badge {
+    position: absolute; /* Permite que o selo "flutue" sobre a imagem */
+    top: 15px;
+    left: 15px;
+    background-color: var(--cor-primaria); /* Usa sua cor principal para destaque */
+    color: var(--cor-escura);
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    z-index: 10; /* Garante que o selo fique na frente da imagem */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* ======================= 7. MENU RESPONSIVO (MOBILE) ======================= */
+
+/* Estilo do botão "hambúrguer" */
+.mobile-menu-toggle {
+    display: none; /* Escondido em telas grandes */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001; /* Para ficar acima de outros elementos */
+}
+
+.mobile-menu-toggle .icon-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--cor-clara); /* Cor das barras */
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Animação do "hambúrguer" para "X" */
+.mobile-menu-toggle.active .icon-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.mobile-menu-toggle.active .icon-bar:nth-child(2) {
+    opacity: 0;
+}
+.mobile-menu-toggle.active .icon-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* --- Media Query para telas pequenas (ex: 900px ou menos) --- */
+@media (max-width: 900px) {
+    
+    /* Mostra o botão hambúrguer */
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    /* Estilo do menu mobile (escondido por padrão) */
+    .nav-links {
+        position: fixed; /* Fica por cima de todo o conteúdo */
+        top: 0;
+        right: 0;
+        width: 70%; /* Ocupa 70% da tela */
+        height: 100vh; /* Altura total */
+        background-color: var(--cor-escura); /* Fundo preto */
+        flex-direction: column; /* Links um embaixo do outro */
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        
+        /* Efeito de "sair da tela" */
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out;
+    }
+
+    /* Estilo do menu quando "ativo" (visível) */
+    .nav-links.active {
+        transform: translateX(0);
+        box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    }
+    
+    /* Estilo dos links dentro do menu mobile */
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 1.4rem; /* Fonte maior para mobile */
+    }
+
+    .login-button {
+        padding: 0.8rem 1.5rem;
+    }
+}
